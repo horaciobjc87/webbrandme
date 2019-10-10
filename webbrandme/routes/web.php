@@ -10,11 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Mail\EnvioCorreo;
+use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hola', function(){
-    echo "Hola Laravel"
-});
+Route::get('brandme', 'TokenRefresh@renewtoken');
